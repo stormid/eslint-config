@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-storm",
+  "name": "eslint-config-stormid",
   "version": "1.0.0",
   "description": "StormId eslint config",
   "main": "index.js",
