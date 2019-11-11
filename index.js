@@ -18,7 +18,6 @@ module.exports = {
       "jest"    
     ],
     "globals": {
-        "sinon": true,
         "expect": true,
         "browser": true,
         "global": true
@@ -34,9 +33,9 @@ module.exports = {
     },
     "rules": {
       "arrow-body-style": [2, "as-needed"],
-      "arrow-parens": [0, "always"],
-      "arrow-spacing": 2,
-      "brace-style": [1, "stroustrup", { "allowSingleLine": true }],
+      "arrow-parens": ["error", "as-needed"],
+      "arrow-spacing": ["error", { "before": true, "after": true }],
+      "brace-style": [2, "1tbs", { "allowSingleLine": true }],
       "camelcase": [1, { "properties": "never" }],
       "comma-style": 0,
       "constructor-super": 2,

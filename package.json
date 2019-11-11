@@ -11,8 +11,9 @@
     "index.js"
   ],
   "scripts": {
-    "test": "eslint index.js",
-    "prepare": "npm test",
+    "test": "npm run test:pass",
+    "test:pass": "eslint -c index.js __tests__/pass/index.js",
+    "test:fail": "! eslint -c index.js __tests__/fail/index.js",
     "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "eslintConfig": {
@@ -24,12 +25,14 @@
   "author": "stormid",
   "dependencies": {
     "babel-eslint": "^8.2.6",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-compat": "^2.1.0",
     "eslint-plugin-jest": "^21.27.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "eslint-plugin-babel": "^5.3.0"
   }
 }
