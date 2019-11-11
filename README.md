@@ -3,14 +3,14 @@ Standard eslint configuration for all StormId JavaScript, with defaults for for 
 
 ## Installation
 ```
-npm i -D eslint eslint-config-stormid
+npm i -D @stormid/eslint-config
 ```
 
 In your package.json
 ```
 {
   "eslintConfig": {
-    "extends": "eslint-config-stormid"
+    "extends": "@stormid/eslint-config"
   }
 }
 ```
@@ -19,6 +19,6 @@ Or .eslintrc
 
 ```
 {
-    extends: 'eslint-config-stormid'
+    extends: '@stormid/eslint-config'
 }
 ```
