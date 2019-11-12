@@ -36,7 +36,7 @@ module.exports = {
       "arrow-parens": ["error", "as-needed"],
       "arrow-spacing": ["error", { "before": true, "after": true }],
       "brace-style": [2, "1tbs", { "allowSingleLine": true }],
-      "camelcase": [1, { "properties": "never" }],
+      "camelcase": 2,
       "comma-style": 0,
       "constructor-super": 2,
       "curly": [0, "multi-line"],

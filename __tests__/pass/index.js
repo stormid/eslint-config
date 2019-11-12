@@ -18,3 +18,9 @@ const braceStyle = n => () => {
     }
 };
 braceStyle();
+
+const camelCase = () => ({
+    propertyOne: 1,
+    propertyTwo: 2
+});
+camelCase();
