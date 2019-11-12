@@ -39,7 +39,6 @@ class A {
     }
 }
 new A();
-
 class B extends null {
     constructor() {
         this.firstName = 'Jane';
@@ -47,3 +46,12 @@ class B extends null {
     }
 }
 new B();
+
+
+const curly = n => {
+    if (n === 0)
+        ++n;
+    else 
+        return n + 1;
+};
+curly();

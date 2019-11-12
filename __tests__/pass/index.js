@@ -44,3 +44,11 @@ class ConstructorSuper extends A {
     }
 }
 new ConstructorSuper();
+
+const curly = n => {
+    if (n === 0) ++n;
+    else {
+        return n + 1;
+    }
+};
+curly();
