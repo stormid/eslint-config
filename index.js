@@ -37,7 +37,7 @@ module.exports = {
       "arrow-spacing": ["error", { "before": true, "after": true }],
       "brace-style": [2, "1tbs", { "allowSingleLine": true }],
       "camelcase": 2,
-      "comma-style": 0,
+      "comma-style": 2,
       "constructor-super": 2,
       "curly": [0, "multi-line"],
       "dot-notation": [2, { "allowPattern": "^[a-z]+(_[a-z]+)+$" }],

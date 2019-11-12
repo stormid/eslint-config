@@ -24,3 +24,23 @@ const camelCase = () => ({
     propertyTwo: 2
 });
 camelCase();
+
+const commaStyle = () => ({
+    propertyOne: 1,
+    propertyTwo: 2
+});
+commaStyle();
+
+class A {
+    constructor() {
+        this.firstName = 'Jane';
+    }
+}
+
+class ConstructorSuper extends A {
+    constructor() {
+        super();
+        this.secondName = 'Doe';
+    }
+}
+new ConstructorSuper();

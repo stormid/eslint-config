@@ -25,3 +25,25 @@ const camel_case = () => ({
     property_two: 2
 });
 camel_case();
+
+const commaStyle = () => ({
+    propertyOne: 1
+    ,propertyTwo: 2
+});
+commaStyle();
+
+class A {
+    constructor() {
+        this.firstName = 'Jane';
+        super();
+    }
+}
+new A();
+
+class B extends null {
+    constructor() {
+        this.firstName = 'Jane';
+        super(); 
+    }
+}
+new B();
