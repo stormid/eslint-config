@@ -52,3 +52,19 @@ const curly = n => {
     }
 };
 curly();
+
+//dot-notation
+const data = { test: 1 };
+const key = 'test';
+data[key] = 2;
+data.fooBar = 42;
+
+//eqeqeq
+const value = 'test';
+value !== 1;
+value === undefined;
+typeof foo === 'undefined';
+'hello' !== 'world';
+0 === 0;
+true === true;
+value === null;
