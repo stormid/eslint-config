@@ -45,7 +45,7 @@ module.exports = {
       "func-style": [2, "declaration", { "allowArrowFunctions": true }],
       "guard-for-in": 2,
       "handle-callback-err": [2, "^(err|error)$"],
-      "indent": 0,
+      "indent": [2, 4],
       "jsx-quotes": [2, "prefer-double"],
       "key-spacing": 2,
       "lines-around-comment": 2,
