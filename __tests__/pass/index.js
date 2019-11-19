@@ -226,7 +226,20 @@ sampleTwo();
 // }
 // Pass:
 const align = {
-    seven: 7
+    one: 1,
+    two: 2
 };
 const spacing = { one: 1, seven: 7 };
 Object.assign({}, align, spacing);
+
+// https://eslint.org/docs/rules/lines-around-comment
+// Fail: no empty line before block comments
+// const myFn = () => true;
+// myFn();
+// /* fail */
+// Pass:
+const myFn = () => true;
+myFn();
+
+/* Pass */
+

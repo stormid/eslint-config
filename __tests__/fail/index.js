@@ -83,7 +83,6 @@ for (const key in forInEx) {
     fn(forInEx[key]);
 }
 
-
 // handle-callback-err
 function loadData (err, data) {
     return data;
@@ -94,7 +93,6 @@ loadData(true, {});
 const Component = ({ b }) => <div>{b}</div>;
 const sample = () => <Component b='c' />; // <-- single quotes
 sample();
-
 
 // key-spacing
 const spacing = {
@@ -110,3 +108,8 @@ const minimum = {
     "one":   1,
     "seven": 7
 }
+
+// lines-around-comment
+const myFn = () => true;
+myFn();
+/* Fail */
