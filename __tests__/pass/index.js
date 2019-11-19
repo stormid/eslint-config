@@ -181,3 +181,15 @@ for (const key in forInEx) {
         fn(forInEx[key]);
     }
 }
+
+// https://eslint.org/docs/rules/handle-callback-err
+// Fail:
+// function loadData (err, data) {
+//     return data;
+// }
+// Pass:
+function loadData (err, data) {
+    if (err) return err;
+    return data;
+}
+loadData(true, {});
