@@ -193,3 +193,40 @@ function loadData (err, data) {
     return data;
 }
 loadData(true, {});
+
+// https://eslint.org/docs/rules/indent
+// Fail: Anything other than 4 spaces
+
+// https://eslint.org/docs/rules/jsx-quotes
+// Fail:
+// const Component = ({ b }) => <div>{b}</div>;
+// const sample = () => <Component b='c' />; <-- single quotes
+// sample();
+// Pass:
+const Component = ({ b }) => <div>{b}</div>;
+const sample = () => <Component b="c" />;
+const sampleTwo = () => <Component b={'c'} />;
+sample();
+sampleTwo();
+
+// https://eslint.org/docs/rules/key-spacing
+// Fail:
+// const spacing = {
+//     "one":  1,
+//     "seven":7
+// }
+// const spacingTwo = { "one" :  1, "seven":7 }
+// const colon = {
+//     "one"   : 1,
+//     "seven" : 7
+// }
+// const minimum = {
+//     "one":   1,
+//     "seven": 7
+// }
+// Pass:
+const align = {
+    seven: 7
+};
+const spacing = { one: 1, seven: 7 };
+Object.assign({}, align, spacing);
