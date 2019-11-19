@@ -114,10 +114,18 @@ const myFn = () => true;
 myFn();
 /* Fail */
 
-// rules/new-cap
+// new-cap
 function person(name) {
     this.name = name;
     this.getName = () => this.name;
 }
 const Jane = new person('Jane');
 Jane.getName();
+
+// new-parens
+function AnotherPerson(name = 'John') {
+    this.name = name;
+    this.getName = () => this.name;
+}
+const John = new AnotherPerson;
+John.getName();

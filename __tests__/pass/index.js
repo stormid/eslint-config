@@ -258,3 +258,19 @@ function Person(name) {
 }
 const Jane = new Person('Jane');
 Jane.getName();
+
+// https://eslint.org/docs/rules/new-parens
+// Fail:
+// function AnotherPerson(name = 'John') {
+//     this.name = name;
+//     this.getName = () => this.name;
+// }
+// const John = new AnotherPerson;
+// John.getName();
+// Pass:
+function AnotherPerson(name = 'John') {
+    this.name = name;
+    this.getName = () => this.name;
+}
+const John = new AnotherPerson('John');
+John.getName();
