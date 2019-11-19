@@ -124,8 +124,13 @@ Jane.getName();
 
 // new-parens
 function AnotherPerson(name = 'John') {
-    this.name = name;
+    this.name = name;   
     this.getName = () => this.name;
 }
 const John = new AnotherPerson;
 John.getName();
+
+//no-alert
+alert("here!");
+confirm("Are you sure?");
+prompt("What's your name?", "John Doe");

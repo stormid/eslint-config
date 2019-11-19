@@ -274,3 +274,9 @@ function AnotherPerson(name = 'John') {
 }
 const John = new AnotherPerson('John');
 John.getName();
+
+// https://eslint.org/docs/rules/no-alert
+// Fail:
+// alert("here!");
+// confirm("Are you sure?");
+// prompt("What's your name?", "John Doe");
