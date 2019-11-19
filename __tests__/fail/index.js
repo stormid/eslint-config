@@ -134,3 +134,7 @@ John.getName();
 alert("here!");
 confirm("Are you sure?");
 prompt("What's your name?", "John Doe");
+
+// no-array-constructor
+Array(0, 1, 2);
+new Array(0, 1, 2);

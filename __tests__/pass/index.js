@@ -280,3 +280,11 @@ John.getName();
 // alert("here!");
 // confirm("Are you sure?");
 // prompt("What's your name?", "John Doe");
+
+// https://eslint.org/docs/rules/no-array-constructor
+// Fail:
+// Array(0, 1, 2);
+// new Array(0, 1, 2);
+// Pass:
+Array(10);
+new Array(10);
