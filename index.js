@@ -49,7 +49,7 @@ module.exports = {
       "jsx-quotes": [2, "prefer-double"],
       "key-spacing": [2, { "align": { "beforeColon": false, "afterColon": true, "on": "value"  } }],
       "lines-around-comment": 2,
-      "new-cap": 1,
+      "new-cap": 2,
       "new-parens": 2,
       "no-alert": 2,
       "no-array-constructor": 2,

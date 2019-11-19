@@ -113,3 +113,11 @@ const minimum = {
 const myFn = () => true;
 myFn();
 /* Fail */
+
+// rules/new-cap
+function person(name) {
+    this.name = name;
+    this.getName = () => this.name;
+}
+const Jane = new person('Jane');
+Jane.getName();

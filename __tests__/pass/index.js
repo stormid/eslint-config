@@ -241,5 +241,20 @@ Object.assign({}, align, spacing);
 const myFn = () => true;
 myFn();
 
-/* Pass */
+/* Lines around comment pass */
 
+// https://eslint.org/docs/rules/new-cap
+// Fail:
+// function person(name) {
+//     this.name = name;
+//     this.getName = () => this.name;
+// }
+// const Jane = new person('Jane');
+// Jane.getName();
+// Pass:
+function Person(name) {
+    this.name = name;
+    this.getName = () => this.name;
+}
+const Jane = new Person('Jane');
+Jane.getName();
