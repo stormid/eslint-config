@@ -69,3 +69,16 @@ typeof foo == 'undefined';
 0 == 0;
 true == true;
 value == null;
+
+//func-style
+const funcStyleExpression = function() {
+    return true;
+};
+funcStyleExpression();
+
+//guard-for-in
+const forInEx = {};
+const fn = v => v;
+for (const key in forInEx) {
+    fn(forInEx[key]);
+}
