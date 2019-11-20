@@ -212,3 +212,19 @@ function noEmpty5({}) {}
 function noEmpty6([]) {}
 function noEmpty7({a: {}}) {}
 function noEmpty8({a: []}) {}
+
+// no-empty
+function noEmpty(value) {
+    if (value) {
+    }
+    while (value) {
+    }
+    switch(value) {
+    }
+    try {
+        doSomething();
+    } catch(err) {
+    } finally {
+    }
+}
+noEmpty(true);

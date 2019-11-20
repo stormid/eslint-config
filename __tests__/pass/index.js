@@ -388,3 +388,40 @@ noEmpty2(noEmptyB);
 let noEmpty3;
 noEmpty3 = 'test';
 noEmpty2(noEmpty3);
+
+// https://eslint.org/docs/rules/no-empty
+// Fail:
+// if (value) {
+// }
+// while (value) {
+// }
+// switch(value) {
+// }
+// try {
+//     doSomething();
+// } catch(ex) {
+// } finally {
+// }
+// Pass:
+function noEmpty(value) {
+    if (value) {
+        // comments are fine
+    }
+
+    while (value) {
+        // to do
+    }
+
+    switch (value) {
+    //to do
+    }
+
+    try {
+        // to do
+    } catch (err) {
+        // to do
+    } finally {
+        // to do
+    }
+}
+noEmpty(true);
