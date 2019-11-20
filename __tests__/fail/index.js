@@ -138,3 +138,77 @@ prompt("What's your name?", "John Doe");
 // no-array-constructor
 Array(0, 1, 2);
 new Array(0, 1, 2);
+
+// no-caller
+function foo() {
+    return arguments.callee;
+}
+
+// no-cond-assign
+var x;
+if (x = 0) {
+    var b = 1;
+}
+
+// no-const-assign
+const a = 0;
+a = 1;
+const b = 0;
+b += 1;
+const c = 0;
+++c;
+
+// no-delete-var
+let x;
+delete x;
+
+// no-dupe-class-members
+class A {
+  b() { }
+  b() { }
+}
+class B {
+  c() { }
+  get c() { }
+}
+class C {
+  static d() { }
+  static d() { }
+}
+
+// no-dupe-keys
+const DupeA = {
+    bar: "baz",
+    bar: "qux"
+};
+const DupeB = {
+    "bar": "baz",
+    bar: "qux"
+};
+const DupeC = {
+    0x1: "baz",
+    1: "qux"
+};
+
+// no-duplicate-imports
+import { merge } from 'module';
+import { find } from 'module';
+
+// no-else-return
+function noElseReturn(x, y, z) {
+    if (x) {
+        return y;
+    } else {
+        return z;
+    }
+}
+
+// no-empty-pattern
+var {} = noEmpty1;
+var [] = noEmpty2;
+var {a: {}} = noEmpty3;
+var {a: []} = noEmpty4;
+function noEmpty5({}) {}
+function noEmpty6([]) {}
+function noEmpty7({a: {}}) {}
+function noEmpty8({a: []}) {}

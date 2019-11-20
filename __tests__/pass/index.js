@@ -288,3 +288,103 @@ John.getName();
 // Pass:
 Array(10);
 new Array(10);
+
+// https://eslint.org/docs/rules/no-caller
+// Fail
+// function foo() {
+//     return arguments.callee;
+// }
+
+// https://eslint.org/docs/rules/no-cond-assign
+// Fail:
+// var x;
+// if (x = 0) {
+//     var b = 1;
+// }
+
+// https://eslint.org/docs/rules/no-const-assign
+// Fail:
+// const a = 0;
+// a = 1;
+// const b = 0;
+// b += 1;
+// const c = 0;
+// ++c;
+
+// https://eslint.org/docs/rules/no-delete-var
+// Fail:
+// let x;
+// delete x;
+
+// https://eslint.org/docs/rules/no-dupe-class-members
+// Fail:
+// class A {
+//   b() { }
+//   b() { }
+// }
+// class B {
+//   c() { }
+//   get c() { }
+// }
+// class C {
+//   static d() { }
+//   static d() { }
+// }
+
+// https://eslint.org/docs/rules/no-dupe-keys
+// Fail:
+// const A = {
+//     bar: "baz",
+//     bar: "qux"
+// };
+// const B = {
+//     "bar": "baz",
+//     bar: "qux"
+// };
+// const C = {
+//     0x1: "baz",
+//     1: "qux"
+// };
+
+// https://eslint.org/docs/rules/no-duplicate-imports
+// Fail:
+// import { merge } from 'module';
+// import { find } from 'module';
+// Pass:
+import { merge, find } from 'module';
+merge();
+find();
+
+// https://eslint.org/docs/rules/no-else-return
+// Fail:
+// function noElseReturn(x, y, z) {
+//     if (x) return y;
+//     else return z;
+// }
+// Pass:
+function noElseReturn(x, y, z) {
+    if (x) return y;
+    return z;
+}
+noElseReturn(true, 'success', 'fail');
+
+// https://eslint.org/docs/rules/no-empty-pattern
+// Fail:
+// var {} = noEmpty1;
+// var [] = noEmpty2;
+// var {a: {}} = noEmpty3;
+// var {a: []} = noEmpty4;
+// function noEmpty5({}) {}
+// function noEmpty6([]) {}
+// function noEmpty7({a: {}}) {}
+// function noEmpty8({a: []}) {}
+// Pass:
+const { noEmptyA = {} } = 'test';
+const { noEmptyB = [] } = 'test';
+function noEmpty1({ a = {} }) {};
+function noEmpty2({ a = [] }) {};
+noEmpty1(noEmptyA);
+noEmpty2(noEmptyB);
+let noEmpty3;
+noEmpty3 = 'test';
+noEmpty2(noEmpty3);
