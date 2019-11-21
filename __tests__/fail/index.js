@@ -292,3 +292,12 @@ const fn = () => true;
 fn ();
 fn
 ();
+
+// no-this-before-super
+class noThisB {}
+class noThisA extends noThisB {
+    constructor() {
+        this.a = 0;
+        super();
+    }
+}

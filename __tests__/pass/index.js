@@ -567,3 +567,26 @@ noRedeclare();
 // Pass:
 const noSpacedFunc = () => true;
 noSpacedFunc();
+
+// https://eslint.org/docs/rules/no-this-before-super
+// Fail:
+// class noThisB {}
+// class noThisA extends noThisB {
+//     constructor() {
+//         this.a = 0;
+//         super();
+//     }
+// }
+// Pass:
+class noThisB {
+    constructor() {
+        this.a = 0; // OK, this class doesn't have an `extends` clause.
+    }
+}
+class noThisA extends noThisB {
+    constructor() {
+        super();
+        this.a = 0; // OK, this is after `super()`.
+    }
+}
+noThisA();
