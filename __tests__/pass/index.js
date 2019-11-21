@@ -412,10 +412,6 @@ function noEmpty(value) {
         // to do
     }
 
-    switch (value) {
-    //to do
-    }
-
     try {
         // to do
     } catch (err) {
@@ -437,3 +433,58 @@ noEmpty(true);
 // };
 // foo.__iterator__ = function () {};
 // foo["__iterator__"] = function () {};
+
+// https://eslint.org/docs/rules/no-lonely-if
+// Fail:
+// if (condition) {
+//     // ...
+// } else {
+//     if (anotherCondition) {
+//         // ...
+//     }
+// }
+// if (condition) {
+//     // ...
+// } else {
+//     if (anotherCondition) {
+//         // ...
+//     } else {
+//         // ...
+//     }
+// }
+// Pass:
+function noLonelyIf(value) {
+    if (value === 0) {
+        return 'Foo';
+    } else if (value === 1) {
+        return 'Bar';
+    }
+}
+noLonelyIf(1);
+
+// https://eslint.org/docs/rules/no-mixed-spaces-and-tabs
+// Pass:
+function noMixedSpacesAndTabsSmartTabs(k) {
+    let i = 0,
+        a = []; //<--allowed mixed tab for alignment
+    while (i < k) {
+        a.push[k + i];
+        i++;
+    }
+    return a;
+}
+noMixedSpacesAndTabsSmartTabs(10);
+
+// https://eslint.org/docs/rules/no-multi-str
+// Fail:
+// const x = "Line 1 \
+//            Line 2";
+// Pass:
+function noMultiStr() {
+    const backticks = `Line 1
+                       Line 2`;
+    const nl = 'Line 1\n' +
+               'Line 2';
+    return [backticks, nl];
+}
+noMultiStr();

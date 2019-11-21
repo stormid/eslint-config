@@ -228,3 +228,28 @@ function noEmpty(value) {
     }
 }
 noEmpty(true);
+
+// no-lonely-if
+function noLonelyIf(value) {
+    if (value === 0) {
+        return 'foo';
+    } else {
+        if (value === 1) {
+            return 'bar';
+        }
+    }
+    if (value % 2 === 0) {
+        return 'baz';
+    } else {
+        if (typeof value === 'number') {
+            return 'super';
+        } else {
+            return 'duper';
+        }
+    }
+};
+
+// https://eslint.org/docs/rules/no-multi-str
+// Fail:
+const multiStr = "Line 1 \
+           Line 2";
