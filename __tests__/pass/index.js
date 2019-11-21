@@ -501,3 +501,24 @@ const noMultiple1 = test => () => test;
 
 
 noMultiple1();
+
+// https://eslint.org/docs/rules/no-new-wrappers
+// Fail:
+// function noNewWrappers() {
+//     const stringObject = new String("Hello world");
+//     const numberObject = new Number(33);
+//     const booleanObject = new Boolean(false);
+//     return [stringObject, numberObject, booleanObject];
+// }
+// const stringObject = new String("Hello world");
+// const numberObject = new Number(33);
+// const booleanObject = new Boolean(false);
+// Pass:
+function noNewWrappers() {
+    const text = String('Hello world');
+    const otherText = 'Hello world';
+    const num = Number(33);
+    const bool = Boolean(false);
+    return [text, otherText, num, bool];
+}
+noNewWrappers();

@@ -259,4 +259,14 @@ const noMultiple1 = test => () => test;
 
 
 
-noMultiple1()
+noMultiple1();
+
+
+// no-new-wrappers
+function noNewWrappers() {
+    const stringObject = new String("Hello world");
+    const numberObject = new Number(33);
+    const booleanObject = new Boolean(false);
+    return [stringObject, numberObject, booleanObject];
+}
+noNewWrappers();
