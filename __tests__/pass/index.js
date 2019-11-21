@@ -590,3 +590,12 @@ class noThisA extends noThisB {
     }
 }
 noThisA();
+
+// https://eslint.org/docs/rules/no-trailing-spaces
+// Fail:
+// const noTrailingSpaces = () => true;  
+// noTrailingSpaces();  
+// Pass:
+const noTrailingSpaces = () => true;
+noTrailingSpaces();
+// comments are fine though   

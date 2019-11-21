@@ -301,3 +301,7 @@ class noThisA extends noThisB {
         super();
     }
 }
+
+// no-trailing-spaces
+const noTrailingSpaces = () => true;  
+noTrailingSpaces();  

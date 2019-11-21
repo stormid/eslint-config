@@ -76,7 +76,7 @@ module.exports = {
       "no-shadow": 0,
       "no-spaced-func": 2,
       "no-this-before-super": 2,
-      "no-trailing-spaces": [2, { "skipBlankLines": true }],
+      "no-trailing-spaces": [2, { "ignoreComments": true }],
       "no-undef-init": 2,
       "no-unneeded-ternary": 2,
       "no-unused-vars": [2, { "args": "none", "varsIgnorePattern": "^h$" }],
