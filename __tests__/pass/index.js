@@ -557,3 +557,13 @@ noRedeclare();
 // !function(Infinity){};
 // var undefined = 5;
 // try {} catch(eval){}
+
+// https://eslint.org/docs/rules/no-spaced-func
+// Fail:
+// const fn = () => true;
+// fn ();
+// fn
+// ();
+// Pass:
+const noSpacedFunc = () => true;
+noSpacedFunc();

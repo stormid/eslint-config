@@ -286,3 +286,9 @@ function NaN(){}
 !function(Infinity){};
 var undefined = 5;
 try {} catch(eval){}
+
+// no-spaced-func
+const fn = () => true;
+fn ();
+fn
+();
