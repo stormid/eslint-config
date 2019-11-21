@@ -522,3 +522,21 @@ function noNewWrappers() {
     return [text, otherText, num, bool];
 }
 noNewWrappers();
+
+// https://eslint.org/docs/rules/no-proto
+// Fail:
+// function noProto() {
+//     const a = obj.__proto__;
+//     const b = obj["__proto__"];
+//     obj.__proto__ = b;
+//     obj["__proto__"] = b;
+// }
+// Pass:
+function noProto() {
+    const b = {};
+    const a = Object.getPrototypeOf(obj);
+    Object.setPrototypeOf(obj, b);
+    const c = { __proto__: a };
+    return [a, c];
+}
+noProto();

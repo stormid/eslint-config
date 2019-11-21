@@ -270,3 +270,9 @@ function noNewWrappers() {
     return [stringObject, numberObject, booleanObject];
 }
 noNewWrappers();
+
+// no-proto
+const a = obj.__proto__;
+const b = obj["__proto__"];
+obj.__proto__ = b;
+obj["__proto__"] = b;
