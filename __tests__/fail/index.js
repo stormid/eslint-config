@@ -250,6 +250,13 @@ function noLonelyIf(value) {
 };
 
 // https://eslint.org/docs/rules/no-multi-str
-// Fail:
 const multiStr = "Line 1 \
            Line 2";
+
+
+// no-multiple-empty-lines
+const noMultiple1 = test => () => test;
+
+
+
+noMultiple1()

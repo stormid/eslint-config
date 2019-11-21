@@ -488,3 +488,16 @@ function noMultiStr() {
     return [backticks, nl];
 }
 noMultiStr();
+
+// https://eslint.org/docs/rules/no-multiple-empty-lines
+// Fail:
+// const noMultiple1 = test => () => test;
+//
+//
+//
+// noMultiple1()
+// Pass:
+const noMultiple1 = test => () => test;
+
+
+noMultiple1();
