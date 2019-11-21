@@ -276,3 +276,7 @@ const a = obj.__proto__;
 const b = obj["__proto__"];
 obj.__proto__ = b;
 obj["__proto__"] = b;
+
+// no-redeclare
+let noRedeclare = () => true;
+let noRedeclare = () = false;

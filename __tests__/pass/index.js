@@ -497,7 +497,7 @@ noMultiStr();
 //
 // noMultiple1()
 // Pass:
-const noMultiple1 = test => () => test;
+const noMultiple1 = () => test;
 
 
 noMultiple1();
@@ -540,3 +540,13 @@ function noProto() {
     return [a, c];
 }
 noProto();
+
+// https://eslint.org/docs/rules/no-redeclare
+// Fail:
+// let noRedeclare = () => true;
+// let noRedeclare = () => false;
+// let Object = 0;
+// Pass:
+let noRedeclare = () => true;
+noRedeclare = () => false;
+noRedeclare();
