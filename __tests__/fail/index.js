@@ -280,3 +280,9 @@ obj["__proto__"] = b;
 // no-redeclare
 let noRedeclare = () => true;
 let noRedeclare = () = false;
+
+// no-shadow-restricted-names
+function NaN(){}
+!function(Infinity){};
+var undefined = 5;
+try {} catch(eval){}

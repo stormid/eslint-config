@@ -550,3 +550,10 @@ noProto();
 let noRedeclare = () => true;
 noRedeclare = () => false;
 noRedeclare();
+
+// https://eslint.org/docs/rules/no-shadow-restricted-names
+// Fail:
+// function NaN(){}
+// !function(Infinity){};
+// var undefined = 5;
+// try {} catch(eval){}
