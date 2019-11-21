@@ -63,7 +63,7 @@ module.exports = {
       "no-else-return": 2,
       "no-empty-pattern": 2,
       "no-empty": 2,
-      "no-extra-parens": 0,			// we use extra parens in JSX ternaries, no way to disable that here.
+      "no-extra-parens": 0,
       "no-iterator": 2,
       "no-lonely-if": 2,
       "no-mixed-spaces-and-tabs": [2, "smart-tabs"],

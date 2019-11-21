@@ -425,3 +425,15 @@ function noEmpty(value) {
     }
 }
 noEmpty(true);
+
+// https://eslint.org/docs/rules/no-extra-parens
+// Off
+// used in JSX ternaries
+
+// https://eslint.org/docs/rules/no-iterator
+// Fail
+// Foo.prototype.__iterator__ = function() {
+//     return new FooIterator(this);
+// };
+// foo.__iterator__ = function () {};
+// foo["__iterator__"] = function () {};
