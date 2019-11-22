@@ -599,3 +599,12 @@ noThisA();
 const noTrailingSpaces = () => true;
 noTrailingSpaces();
 // comments are fine though   
+
+// https://eslint.org/docs/rules/no-undef-init
+// Fail:
+// var foo = undefined;
+// let bar = undefined;
+// Pass:
+// var foo;
+// let bar;
+// const baz = undefined;
