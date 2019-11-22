@@ -304,4 +304,15 @@ class noThisA extends noThisB {
 
 // no-trailing-spaces
 const noTrailingSpaces = () => true;  
-noTrailingSpaces();  
+noTrailingSpaces();   
+
+
+// no-undef-init
+var foo = undefined;
+let bar = undefined;
+
+// no-unneeded-ternary
+function noUnneededTernary(x){
+    const a = x === 2 ? true : false;
+    return a;
+}

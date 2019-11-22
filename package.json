@@ -12,8 +12,8 @@
   ],
   "scripts": {
     "test": "npm run test:pass",
-    "test:pass": "eslint -c index.js __tests__/pass/index.js",
-    "test:fail": "! eslint -c index.js __tests__/fail/index.js",
+    "test:pass": "node_modules/.bin/eslint -c index.js __tests__/pass/index.js",
+    "test:fail": "! node_modules/.bin/eslint -c index.js __tests__/fail/index.js",
     "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "eslintConfig": {

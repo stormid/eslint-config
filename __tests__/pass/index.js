@@ -608,3 +608,16 @@ noTrailingSpaces();
 // var foo;
 // let bar;
 // const baz = undefined;
+
+// https://eslint.org/docs/rules/no-unneeded-ternary
+// Fail:
+// function noUnneededTernary(x){
+//     const a = x === 2 ? true : false;
+//     return a;
+// }
+// Pass:
+function noUnneededTernary(x){
+    const a = x === 2;
+    return a;
+}
+noUnneededTernary(2);
