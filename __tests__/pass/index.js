@@ -643,3 +643,14 @@ noVar(1);
 // Pass:
 const r = ({ x, y }) => Math.sqrt(x * x + y * y);
 r({ x: 2, y: 4 });
+
+
+// https://eslint.org/docs/rules/object-curly-spacing
+// Fail:
+// const obj = {foo: "bar"};
+// Pass:
+// const obj = { foo: "bar" };
+// const nestedObj = { foo: { zoo: "bar" } };
+// const { x, y } = y;
+// import { foo } from "bar";
+// export { foo };

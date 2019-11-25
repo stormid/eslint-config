@@ -327,3 +327,6 @@ function noVar(x){
 with (point) {
     r = Math.sqrt(x * x + y * y); // is r a member of point?
 }
+
+// object-curly-spacing
+const wrongObjectCurlySpacing = {foo: "bar"};
