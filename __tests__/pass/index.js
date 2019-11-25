@@ -621,3 +621,16 @@ function noUnneededTernary(x){
     return a;
 }
 noUnneededTernary(2);
+
+// https://eslint.org/docs/rules/no-var
+// Fail:
+// function noVar(x){
+//     var DOUBLE = 2;
+//     return x * DOUBLE;
+// }
+// Pass:
+function noVar(x){
+    const DOUBLE = 2;
+    return x * DOUBLE;
+}
+noVar(1);

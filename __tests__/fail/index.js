@@ -316,3 +316,9 @@ function noUnneededTernary(x){
     const a = x === 2 ? true : false;
     return a;
 }
+
+// no-var
+function noVar(x){
+    var DOUBLE = 2;
+    return x * DOUBLE;
+}
