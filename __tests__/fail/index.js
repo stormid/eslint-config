@@ -322,3 +322,8 @@ function noVar(x){
     var DOUBLE = 2;
     return x * DOUBLE;
 }
+
+// no-with
+with (point) {
+    r = Math.sqrt(x * x + y * y); // is r a member of point?
+}

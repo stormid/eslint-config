@@ -634,3 +634,12 @@ function noVar(x){
     return x * DOUBLE;
 }
 noVar(1);
+
+// https://eslint.org/docs/rules/no-with
+// Fail:
+// with (point) {
+//     r = Math.sqrt(x * x + y * y); // is r a member of point?
+// }
+// Pass:
+const r = ({ x, y }) => Math.sqrt(x * x + y * y);
+r({ x: 2, y: 4 });
