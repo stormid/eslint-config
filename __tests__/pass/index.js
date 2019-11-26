@@ -690,3 +690,12 @@ const fns2 = {
 };
 fns.a();
 fns2.x(objectShorthand.propX);
+
+// https://eslint.org/docs/rules/prefer-arrow-callback
+// Fail:
+// preferArrowCallback(function(x, y) { return x + y; });
+// Pass:
+function preferArrowCallback(cb){
+    cb();
+}
+preferArrowCallback((x, y) => x + y);

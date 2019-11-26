@@ -347,3 +347,6 @@ const fns2 = {
     [y]: function() {},
     propZ: propZ
 };
+
+// prefer-arrow-callback
+preferArrowCallback(function(x, y) { return x + y; });
