@@ -350,3 +350,8 @@ const fns2 = {
 
 // prefer-arrow-callback
 preferArrowCallback(function(x, y) { return x + y; });
+
+// prefer-rest-params
+// function preferRestParams() {
+//     return arguments;
+// }

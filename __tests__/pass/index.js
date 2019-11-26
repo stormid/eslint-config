@@ -699,3 +699,15 @@ function preferArrowCallback(cb){
     cb();
 }
 preferArrowCallback((x, y) => x + y);
+
+
+// https://eslint.org/docs/rules/prefer-rest-params
+// Fail:
+// function preferRestParams() {
+//     return arguments;
+// }
+// Pass:
+function preferRestParams(...args) {
+    return [ ...args ];
+}
+preferRestParams(1, 2, 3);
