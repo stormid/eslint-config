@@ -330,3 +330,20 @@ with (point) {
 
 // object-curly-spacing
 const wrongObjectCurlySpacing = {foo: "bar"};
+
+// object-shorthand
+const obj = {
+    propX: propX,
+    propY: propY,
+    propZ: propZ,
+};
+const fns = {
+    a: function() {},
+    b: function() {}
+};
+const fns2 = {
+    w: function() {},
+    x: function *() {},
+    [y]: function() {},
+    propZ: propZ
+};

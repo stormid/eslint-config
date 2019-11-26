@@ -654,3 +654,39 @@ r({ x: 2, y: 4 });
 // const { x, y } = y;
 // import { foo } from "bar";
 // export { foo };
+
+// https://eslint.org/docs/rules/object-shorthand
+// Fail:
+// const obj = {
+//     propX: propX,
+//     propY: propY,
+//     propZ: propZ,
+// };
+// const fns = {
+//     a: function() {},
+//     b: function() {}
+// };
+// const fns2 = {
+//     w: function() {},
+//     x: function *() {},
+//     [y]: function() {},
+//     propZ: propZ
+// };
+// Pass:
+const propX = 1;
+const propY = 2;
+const propZ = 3;
+const objectShorthand = { propX, propY, propZ };
+const fns = {
+    a() {},
+    b() {}
+};
+const fns2 = {
+    w() {},
+    *x() {},
+    [propY]() {},
+    propZ,
+    z: y => y
+};
+fns.a();
+fns2.x(objectShorthand.propX);
