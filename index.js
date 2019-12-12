@@ -47,7 +47,7 @@ module.exports = {
       "handle-callback-err": [2, "^(err|error)$"],
       "indent": [2, 4],
       "jsx-quotes": [2, "prefer-double"],
-      "key-spacing": [2, { "align": { "beforeColon": false, "afterColon": true, "on": "value"  } }],
+      "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
       "lines-around-comment": 2,
       "new-cap": 2,
       "new-parens": 2,
