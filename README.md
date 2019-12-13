@@ -1,4 +1,4 @@
-# eslint-config-stormid
+# eslint-config
 Standard eslint configuration for all StormId JavaScript, with defaults for for ES2015, React and Jest.
 
 ## Installation
