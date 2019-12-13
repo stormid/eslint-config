@@ -43,7 +43,7 @@ module.exports = {
       "dot-notation": [2, { "allowPattern": "^[a-z]+(_[a-z]+)+$" }],
       "eqeqeq": 2,
       "func-style": [2, "declaration", { "allowArrowFunctions": true }],
-      "guard-for-in": 2,
+      "guard-for-in": 0,
       "handle-callback-err": [2, "^(err|error)$"],
       "indent": [2, 4],
       "jsx-quotes": [2, "prefer-double"],
