@@ -14,7 +14,7 @@
     "test": "npm run test:pass",
     "test:pass": "node_modules/.bin/eslint -c index.js __tests__/pass/index.js",
     "test:fail": "! node_modules/.bin/eslint -c index.js __tests__/fail/index.js",
-    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish --access=public"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
