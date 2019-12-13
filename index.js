@@ -45,7 +45,7 @@ module.exports = {
       "func-style": [2, "declaration", { "allowArrowFunctions": true }],
       "guard-for-in": 0,
       "handle-callback-err": [2, "^(err|error)$"],
-      "indent": [2, 4],
+      "indent": [2, 4, { "ignoredNodes": ["JSXElement *", "JSXElement"] }],
       "jsx-quotes": [2, "prefer-double"],
       "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
       "lines-around-comment": 2,
@@ -98,7 +98,7 @@ module.exports = {
       "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
       "radix": 2,
       "rest-spread-spacing": 2,
-      "space-before-function-paren": [0, "always"],		// for fmt
+      "space-before-function-paren": [0, "always"],
       "space-in-parens": [0, "never"],
       "strict": [2, "never"],
       "unicode-bom": 2,
