@@ -116,7 +116,7 @@ module.exports = {
       "react/jsx-curly-spacing": 2,
       "react/display-name": [2, { "ignoreTranspilerName": false }],
       "react/jsx-equals-spacing": 2,
-      "react/jsx-indent-props": [2, "tab"],
+      "react/jsx-indent-props": [2, 4],
       "react/jsx-max-props-per-line": [2, { "maximum": 6 }],
       "react/jsx-no-bind": [2, { "ignoreRefs": true }],
       "react/jsx-no-comment-textnodes": 2,
