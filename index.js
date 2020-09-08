@@ -112,7 +112,6 @@ module.exports = {
       "require-atomic-updates": 0,
       "no-console": ["error", { "allow": ["warn", "error"] }],
       "react/jsx-boolean-value": [2, "never"],
-      "react/jsx-closing-bracket-location": 2,
       "react/jsx-curly-spacing": 2,
       "react/display-name": [2, { "ignoreTranspilerName": false }],
       "react/jsx-equals-spacing": 2,
